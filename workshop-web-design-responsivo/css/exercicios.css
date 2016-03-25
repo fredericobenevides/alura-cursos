@@ -46,3 +46,32 @@ header {
 .barra-nav {
   margin: 0.4em 0;
 }
+
+/* cap 3 */
+@media (min-width: 600px) {
+  html {
+    font-size: 1.125em;
+  }
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 1.25em;
+  }
+}
+
+.secao {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .secao {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .secao {
+    width: 33.333%;
+  }
+}
