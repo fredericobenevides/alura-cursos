@@ -60,6 +60,10 @@
 footer {
     background-color: #000;
     color: #FFF;
+    padding: 2em;
+}
+footer h2 {
+  font-size: 3em;
 }
 footer a {
     color: #F99;
