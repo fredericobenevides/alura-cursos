@@ -1,7 +1,7 @@
 porcentagem no padding: relação a largura do pai do elemento
 rem no padding: relação do tamanho (altura) da fonte do navegador.
 
-1ch: tem como base a largura do caractere zero da fonte usada;
+1ch: tem como base a largura do caractere zero da fonte usada. 1 caracter médio da fonte.;
 
 
 
@@ -17,7 +17,7 @@ p {
 
 
 
-1rem: tem como padrão a fonte do navegador ou pela tag html se caso esta estiver definido.
+1rem: tem como padrão a fonte do navegador ou pela tag html se caso esta estiver definido. Ele é o tamanho da altura da fonte.
 
 html {
   font-size: 25px;
@@ -30,7 +30,7 @@ p {
 
 
 
-1%:
+1% nas seguintes propriedades:
 font-size: é relativo ao tamanho da fonte do pai do elemento
 margin, padding e width: relativo a largura do pai do elemento.
 height: relativo a altura do pai do elemento.

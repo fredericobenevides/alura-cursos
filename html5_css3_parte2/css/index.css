@@ -4,9 +4,13 @@
 .saudacao p {
     color: #99A;
     line-height: 1;
+
+    padding: 2em;
 }
 .saudacao-inicio {
     color: #889;
+
+    font-size: 3em;
 }
 .saudacao-ultima-linha {
     text-align: right;
@@ -14,32 +18,44 @@
 }
 .saudacao strong {
     color: #000;
+
+  font-size: 2em;
 }
 .saudacao em {
     color: #851944;
+
+    font-size: 4em;
 }
 .botao-index {
     background-color: #851944;
     color: #FFF;
     border: .2em solid black;
-    width: 400px;
+    width: 40ch;
     display: block;
     text-align: center;
+
+    padding: .5em;
+    margin: 2em auto;
+}
+.secao-inicio {
+  padding: 2em;
 }
 .secao-inicio h2 {
     text-transform: uppercase;
+
+    font-size: 3em;
 }
 .trabalhos {
     background-color: #3C1D3D;
-    border-top: 10px solid #000;
-    border-bottom: 10px solid #000;
+    border-top: .5em solid #000;
+    border-bottom: .5em solid #000;
 }
 .trabalhos h2 {
     color: #FFF;
 }
 .trabalhos ul {
     overflow: hidden;
-    border: 10px solid black;
+    border: .5em solid black;
 }
 .trabalhos li {
     float: left;
@@ -52,7 +68,14 @@
 .blog {
     background-color: #999;
     color: #FFF;
-    border-bottom: 10px solid #851944;
+    border-bottom: .5em solid #851944;
+}
+.blog small {
+  position: relative;
+  top: -1em;
+}
+.blog li {
+  margin: .5em 0;
 }
 .blog li a {
     color: #FCF;
