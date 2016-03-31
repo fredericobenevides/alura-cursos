@@ -1,0 +1,69 @@
+html {
+  font-size: 100%;
+}
+
+.container {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+
+  /* ao invés de 16px ficará 14.4px */
+  font-size: 90%;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  /* border: 1px solid black; */
+  background-color: #B0B4AB;
+}
+
+.porcentagem p {
+  padding: 5%; /* pega a porcentagem em relação a largura do container  */
+  border: 1px solid black;
+  width: 50%;
+
+  /* font size é definido em relação ao tamanho do pai */
+  /* ou seja, 100% vai ficar igual a 14.4px */
+  font-size: 100%;
+}
+
+.rem p {
+  padding: 1rem; /* pega o tamanho px da fonte atual do navegador/html */
+  border: .1rem solid black;
+  width: 1rem;
+
+  /* como é rem, o font-size vai pegar o tamanho padrão do html/navegador que é 16px */
+  /* Um detalhe em relação ao rem vs em. É que se alterar o valor do font-size do rem, os paddings manterão o mesmo valor devido ao tamanho da fonte pai. */
+  font-size: 2rem;
+}
+
+.em p {
+  padding: 1em; /* pega o tamanho px da própria fonte ou do pai caso não tenha definido a fonte */
+  border: .1em solid black;
+  width: 1em;
+
+  /* ao aumentar o valor do em, os valores de padding, width etc vão aumentar de acordo com o tamanho da fonte atual. */
+  font-size: 2em;
+}
+
+.ch p {
+  padding: 1ch; /* pega o tamanho da largura 0 da fonte usada. */
+  border: 0.2ch solid black;
+  width: 1ch;
+
+  /* usa o tamanho de acordo com o tamanho médio do caractere de uma fonte. */
+  font-size: 1ch;
+}
+
+.misturado p {
+  padding: 1em;
+  border: 0.2em solid black;
+  width: 8ch;
+
+  font-size: 1.5em;
+}
