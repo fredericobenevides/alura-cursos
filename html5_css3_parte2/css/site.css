@@ -17,6 +17,7 @@ h2,
 h1 {
     text-transform: uppercase;
     font-size: 60px;
+    text-shadow: 5px 5px #000;
 }
 
 .titulo-principal {
@@ -61,8 +62,10 @@ main p {
 }
 
 .rodape-pagina {
-    background-color: #000;
-    color: #F2FFFC;
+    /* background-color: #000; */
+    background-color: rgba(0, 0, 0, .3);
+    /* color: #F2FFFC; */
+    color: black;
     padding: 1rem;
     clear: both;
     position: fixed;
@@ -70,6 +73,7 @@ main p {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    /* opacity: .3; */
 }
 
 .container {
