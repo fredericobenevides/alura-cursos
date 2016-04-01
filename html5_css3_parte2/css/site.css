@@ -1,10 +1,7 @@
-html {
-    font-size: 120%;
-}
-
 body {
     font-family: "Crimson Text", "Times New Roman", serif;
     background-color: #F2FFFC;
+    font-size: 120%;
     line-height: 1.5;
 }
 
@@ -16,12 +13,11 @@ h2,
 
 h1 {
     text-transform: uppercase;
-    font-size: 60px;
-    text-shadow: 5px 5px #000;
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
 }
 
 .titulo-principal {
-    font-size: 300%;
     text-align: center;
     background-color: #851944;
     color: #FFF;
@@ -30,7 +26,7 @@ h1 {
 }
 
 .subtitulo-texto {
-    font-size: 150%;
+    font-size: 1.5em;
     clear: both;
 }
 
@@ -40,14 +36,14 @@ main a {
 
 main p {
     text-align: justify;
-    margin: 1rem 0;
+    margin: 1em 0;
 }
 
 .navegacao-site {
     text-align: center;
     background-color: #3C1D3D;
     color: #F2FFFC;
-    padding: 1rem;
+    padding: 1em;
 }
 
 .navegacao-site a {
@@ -57,30 +53,27 @@ main p {
 }
 
 .navegacao-site h1 {
-    font-size: 150%;
-    margin-bottom: 0.5rem;
+    font-size: 1.5em;
+    margin-bottom: 1em;
 }
 
 .rodape-pagina {
-    /* background-color: #000; */
-    background-color: rgba(0, 0, 0, .3);
-    /* color: #F2FFFC; */
-    color: black;
-    padding: 1rem;
+  background-color: rgba(0, 0, 0, .3);
+    color: #F2FFFC;
+    padding: 1em;
     clear: both;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    /* opacity: .3; */
 }
 
 .container {
-    width: 720px;
+    width: 80ch;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem 0;
+    padding: 1.5em 0;
 }
 
 strong {
@@ -117,13 +110,13 @@ em {
 main {
     width: 80%;
     float: left;
-    padding-bottom: 4rem;
+    padding-bottom: 4em;
 }
 
 .minha-foto,
 .navegacao-site {
-    border-left: 0.5rem solid black;
-    border-bottom: 0.5rem solid black;
+    border-left: .5em solid black;
+    border-bottom: .5em solid black;
     box-sizing: border-box;
 }
 

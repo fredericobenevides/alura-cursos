@@ -1,70 +1,65 @@
-html,body {
-  height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  perspective: 6px;
-  perspective-origin: 50% 160px;
+.titulo-principal {
+  background-image: linear-gradient(to bottom, #f00, #888 80%, #000);
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
 }
 .foto-home {
     height: 200px;
-    border-radius: 10% 50% / 50% 10%;
-    box-shadow: 0 0 1em #000;
+    border-radius: 50%;
 }
 .saudacao p {
+    font-size: 1.5em;
     color: #99A;
     line-height: 1;
-
     padding: 2em;
 }
 .saudacao-inicio {
-    color: #889;
-
     font-size: 3em;
+    color: #889;
 }
 .saudacao-ultima-linha {
     text-align: right;
     display: block;
 }
 .saudacao strong {
+    font-size: 2em;
     color: #000;
-
-  font-size: 2em;
 }
 .saudacao em {
     color: #851944;
-
     font-size: 4em;
+    -webkit-transform: rotate(-5deg) skew(-10deg);
+            transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
-    transform: rotate(-5deg) skew(-30deg)
 }
 .botao-index {
+    font-size: 1.25em;
     background-color: #851944;
     color: #FFF;
+    padding: .5em;
     border: .2em solid black;
     width: 40ch;
+    margin: 2em auto;
     display: block;
     text-align: center;
-
-    padding: .5em;
-    margin: 2em auto;
-    box-shadow: 0 0 1em #000, inset 0 0 .5em #FFF;
 }
 .secao-inicio {
-  padding: 2em;
+    padding: 2em;
 }
 .secao-inicio h2 {
-    -webkit-text-transform: uppercase;
-    text-transform: uppercase;
-
     font-size: 3em;
-    text-shadow: 5px 5px #000;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+  text-shadow: 2px 2px #000;
 }
 .trabalhos {
     background-color: #3C1D3D;
     border-top: .5em solid #000;
     border-bottom: .5em solid #000;
+  background-image: linear-gradient(135dep, transparent, transparent 14px, rgba(0,0,0,.1) 14px, rgba(0,0,0,.1) 15px, transparent 15px, transparent);
+  background-size: 20px 20px;
+  background-attachment: fixed;
 }
 .trabalhos h2 {
     color: #FFF;
@@ -83,35 +78,21 @@ body {
 }
 .blog {
     background-color: #999;
+    position: relative;
     color: #FFF;
     border-bottom: .5em solid #851944;
-    position: relative;
 }
 .blog small {
-  position: relative;
-  top: -1em;
+    position: relative;
+    top: -2em;
 }
 .blog li {
-  margin: .5em 0;
-  width: 30%;
+    width: 30%;
 }
 .blog li a {
     color: #FCF;
-}
-.blog .mais-recente {
-  background-color: #FFF;
-  color: #F26;
-}
-.blog .inicio-post {
-  background-color: #F2FFFC;
-  color: #000;
-  position: absolute;
-  top: 4em;
-  right: 4em;
-  height: 8em;
-  padding: 1.5em;
-  width: 90ch;
-
+    padding: .5em;
+    display: block;
 }
 footer {
     background-color: #000;
@@ -119,7 +100,7 @@ footer {
     padding: 2em;
 }
 footer h2 {
-  font-size: 3em;
+    font-size: 3em;
 }
 footer a {
     color: #F99;
@@ -129,118 +110,157 @@ main {
     padding-bottom: 0;
     float: none;
 }
-
-.titulo-principal {
-  position: relative;
+html,body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+    -webkit-perspective: 6px;
+            perspective: 6px;
+    -webkit-perspective-origin: 50% 160px;
+            perspective-origin: 50% 160px;
 }
 .palavras-home {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    color: rgba(255, 127, 127, 0.5);
 }
-.palavras-home,
-.titulo-principal {
-  transform-style: preserve-3d;
-}
-.palavras-home li {
-  font-size: 400%;
-}
-
 .palavra-home {
-  font-size: .5em;
-  font-family: "Shadows Into Light", cursive;
-  font-weight: bold;
-  color: #D5447E;
-  position: absolute;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: bold;
+    font-size: 400%;
+    color: #D5447E;
+    position: absolute;
 }
 .eficiencia {
-    top: 20%;
-    left: 75%;
-    -webkit-transform: rotate(-10deg);
-    transform: translate(-50%, -50%) rotate(-5deg) translateZ(4px) scale(0.10);
+    top: 50%;
+    left: 60%;
+    opacity: .8;
+    -webkit-transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(4px) rotate(-5deg) scale(.25);
 }
 .boas-praticas {
     top: 70%;
     left: 20%;
-    -webkit-transform: rotate(8deg);
-    transform: translate(-50%, -50%) rotate(10deg) translateZ(1px) scale(0.1);
+    opacity: .4;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(10deg) scale(.25);
 }
 .codigo-limpo {
     top: 45%;
-    left: 10%;
-    -webkit-transform: rotate(-14deg);
-    transform: translate(-50%, -50%) rotate(-10deg) translateZ(2px) scale(0.1);
+    left: 25%;
+    opacity: .9;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-10deg) scale(.25);
 }
 .css3 {
-    top: 50%;
-    left: 30%;
-    -webkit-transform: rotate(5deg);
-    transform: translate(-50%, -50%) rotate(5deg) translateZ(2px) scale(0.1);
+    top: 55%;
+    left: 35%;
+    opacity: .8;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(5deg) scale(.25);
 }
 .html5 {
-    top: 40%;
-    left: 80%;
-    -webkit-transform: rotate(10deg);
-    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(0.1);
+    top: 30%;
+    left: 65%;
+    opacity: .7;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
 }
 .javascript {
-    top: 10%;
+    top: 15%;
     left: 60%;
-  opacity: .3;
-    -webkit-transform: rotate(-10deg);
-    transform: translate(-50%, -50%) rotate(-5deg) translateZ(1px) scale(0.1);
+    opacity: .5;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(-5deg) scale(.25);
 }
 .acessibilidade {
     top: 30%;
-    left: 25%;
-  opacity: .8;
-    -webkit-transform: rotate(-8deg);
-    transform: translate(-50%, -50%) rotate(-5deg) translateZ(3px) scale(0.1);
+    left: 35%;
+    opacity: .9;
+    -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(3px) rotate(-5deg) scale(.25);
 }
 .responsivo {
-    top: 15%;
-    left: 15%;
-    -webkit-transform: rotate(10deg);
-    transform: translate(-50%, -50%) rotate(10deg) translateZ(3px) scale(0.1);
+    top: 40%;
+    left: 40%;
+    opacity: .7;
+    -webkit-transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(3px) rotate(10deg) scale(.25);
 }
 .otimizacoes {
-    top: 60%;
-    left: 70%;
-    -webkit-transform: rotate(4deg);
-    transform: translate(-50%, -50%) rotate(-5deg) translateZ(2px) scale(0.1);
+    top: 70%;
+    left: 65%;
+    opacity: .6;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(-5deg) scale(.25);
 }
 .agilidade {
-    top: 10%;
-    left: 30%;
-    -webkit-transform: rotate(13deg);
-    transform: translate(-50%, -50%) rotate(5deg) translateZ(1px) scale(0.1);
+    top: 75%;
+    left: 35%;
+    opacity: .2;
+    -webkit-transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(1px) rotate(5deg) scale(.25);
 }
 .design {
-    top: 35%;
-    left: 65%;
-    -webkit-transform: rotate(10deg);
-    transform: translate(-50%, -50%) rotate(10deg) translateZ(2px) scale(0.1);
+    top: 40%;
+    left: 60%;
+    opacity: .6;
+    -webkit-transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+            transform: translate(-50%, -50%) translateZ(2px) rotate(10deg) scale(.25);
+}
+.titulo-principal {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
 }
 .banner-twitter {
-  width: 14em;
-  line-height: 1;
-  padding: 1em 0;
-  box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
 
-  text-align: center;
-  text-decoration: none;
-  background-color: #3C1D3D;
-  color: white;
-  border: .25em solid black;
+    line-height: 1;
 
-  font-size: .3em;
-  font-family: "Open Sans Condensed", sans-serif;
+    /* largura = 14em */
+    /* altura = 3.5em */
+    /* tx = .707 * h - .707 * w + w */
+    /* ty = -.707 * h */
+    -webkit-transform: translate(6.5765em, -2.4745em) rotate(45deg);
+            transform: translate(6.5765em, -2.4745em) rotate(45deg);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
 
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform-origin: 0 0;
-  transform: translate(6.5765em, -2.4745em) rotate(45deg);
+    width: 14em;
+    padding: 1em 0;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-decoration: none;
+    background-color: #3C1D3D;
+    color: white;
+    border: .25em solid black;
+
+    font-size: 1.2em;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+.blog .inicio-post {
+    position: absolute;
+    top: 4em;
+    height: 8em;
+    left: 30%;
+    right: 4em;
+    background-color: #F2FFFC;
+    color: #000;
+    padding: 1.5em;
+}
+.blog .mais-recente {
+    background-color: #F2FFFC;
+}
+.blog .mais-recente a {
+    color: #F26;
 }
