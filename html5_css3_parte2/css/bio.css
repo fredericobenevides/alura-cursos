@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+.citacao-bio::before {
+  content: "“";
+  position: absolute;
+  font-size: 10em;
+  color: #bbb;
+  line-height: .8;
+}
+
+.citacao-bio > p {
+  position: relative;
+}
+
 /* .petrobras { */
 .citacao-bio:nth-of-type(even) {
     float: left;
