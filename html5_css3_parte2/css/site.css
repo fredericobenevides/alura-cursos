@@ -14,7 +14,7 @@ h2,
 h1 {
     text-transform: uppercase;
     font-size: 3em;
-    text-shadow: 2px 2px #000;
+    text-shadow: 3px 3px #000;
 }
 
 .titulo-principal {
@@ -35,10 +35,10 @@ main a {
 }
 
 main a:hover,
-main a:focus
-footer a:hover,
-footer a:focus {
-  color: red;
+main a:focus,
+footer a:focus,
+footer a:hover {
+    color: red;
 }
 
 main p {
@@ -61,7 +61,7 @@ main p {
 
 .navegacao-site a:hover,
 .navegacao-site a:focus {
-  box-shadow: 0 0 2px pink;
+    text-shadow: 0 0 2px pink;
 }
 
 .navegacao-site h1 {
@@ -70,7 +70,6 @@ main p {
 }
 
 .rodape-pagina {
-  /* background-color: rgba(0, 0, 0, .3); */
     color: #F2FFFC;
     padding: 1em;
     clear: both;
@@ -79,27 +78,22 @@ main p {
     left: 0;
     width: 100%;
     box-sizing: border-box;
-
-  /* background-image: radial-gradient(to up right, rgba(60, 29, 61, 0.8), black) */
-  background-image: radial-gradient(ellipse at left bottom, rgba(60, 29, 61, 0.8), rgba(60, 29, 61, 0.8) 65%, black 65%, black 70%, transparent 70%, transparent);
-  background-size: 25% 100px;
-  background-repeat: no-repeat;
- }
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%);
+    background-size: 25% 100%;
+}
 
 .container {
     width: 80ch;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em 0;
-}
-
-.container > p::first-letter {
-  color: #3C1D3D;
-  font-weight: bold;
-  font-size: 3em;
-  text-shadow: 2px 2px #000;
-  margin-right: .2ch;
-  line-height: 1;
 }
 
 strong {
@@ -119,31 +113,8 @@ em {
     height: 40px;
     display: block;
     text-indent: -99999px;
-    position: relative;
 }
 
-.icones-redes-sociais a:hover::after,
-.icones-redes-sociais a:focus::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  top: 100%;
-  right: 0;
-  text-indent: 0;
-  width: 300%;
-  background: black;
-  font-size: .75em;
-}
-.icones-redes-sociais a:hover::before,
-.icones-redes-sociais a:focus::before {
-    content: '';
-    width: 1em;
-    height: 1em;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(.5em) rotate(45deg);
-}
 .github {
     background-image: url(../imagens/github.png);
 }
@@ -158,7 +129,7 @@ em {
 
 main {
     /* width: 80%; */
-  width: calc(100% - 0.9 * 300px);
+  width: calc(100% - (0.9 *  300px));
     float: left;
     padding-bottom: 4em;
 }
@@ -172,7 +143,7 @@ main {
 
 .navegacao-site {
     /* width: 20%; */
-  width: calc(0.9 * 300px);
+    width: calc(0.9 * 300px);
     float: right;
     position: relative;
     top: 300px;
@@ -183,4 +154,33 @@ main {
     top: 0;
     right: 0;
     height: 300px;
+}
+
+.icones-redes-sociais a {
+    position: relative;
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: black;
+    color: white;
+    top: 100%;
+    width: 300%;
+    right: 0;
+    text-indent: 0;
+    font-size: .75em;
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    transform: translateY(.5em) rotate(45deg);
 }
