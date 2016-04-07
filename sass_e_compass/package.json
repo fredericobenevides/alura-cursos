@@ -1,0 +1,19 @@
+{
+  "name": "workshop-web-design-responsivo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run watch\" \"npm run lite\" ",
+    "build:css": "node-sass css/estilos.scss css/estilos.css",
+    "build": "npm run build:css",
+    "watch:css": "npm run build:css -- -w",
+    "watch": "npm run watch:css",
+    "lite": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.1.0",
+    "node-sass": "^3.4.2"
+  }
+}
