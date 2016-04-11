@@ -1,31 +1,27 @@
 // peso / altura * altura
 
-var trsPacientes = document.getElementsByClassName("paciente");
+function calculaTodosImcs() {
+  var trsPacientes = document.getElementsByClassName("paciente");
 
-percorreArray(trsPacientes, function(pacienteTr) {
-  var tdNome = pacienteTr.getElementsByClassName("info-nome")[0];
-  var tdPeso = pacienteTr.getElementsByClassName("info-peso")[0];
-  var tdAltura = pacienteTr.getElementsByClassName("info-altura")[0];
+  percorreArray(trsPacientes, function(pacienteTr) {
+    var pacienteAtual = montaPaciente(pacienteTr);
 
-  // var pacienteAtual = {
-  //   nome : tdNome.textContent,
-  //   peso: tdPeso.textContent,
-  //   altura : tdAltura.textContent,
-  //   pegaImc: function() {
-  //     if (this.altura != 0) {
-  //       var imc = this.peso / (this.altura * this.altura)// 25
-  //       return imc;
-  //     } else {
-  //       console.log("Não executei porque altura eh igual a zero");
-  //     }
-  //   }};
+    var imc = pacienteAtual.pegaImc();
 
-  var pacienteAtual = montaPaciente(pacienteTr);
+    var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
+    tdImc.textContent = imc;
 
-  var imc = pacienteAtual.pegaImc();
+    console.log(imc);
+  });
+}
 
-  var tdImc = pacienteTr.getElementsByClassName("info-imc")[0];
-  tdImc.textContent = imc;
+var botao = document.getElementById("calcula-imcs");
+// botao.onclick = calculaTodosImcs;
+// botao.onclick = function() {
+//   console.log("Calculando Imcs");
+// }
 
-  console.log(imc);
-})
+botao.addEventListener("click", calculaTodosImcs);
+botao.addEventListener("click", function() {
+  console.log("calculando imcs");
+});
