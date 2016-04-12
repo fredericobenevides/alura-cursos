@@ -1,6 +1,6 @@
 {
   "open": false,
   "port": 3000,
-  "files": ["./**/*.{html,htm,css,js}"],
+  "files": ["./**/*.{html,htm,css,js,svg}"],
   "server": { "baseDir": "./" }
 }
