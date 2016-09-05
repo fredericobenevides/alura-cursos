@@ -20,6 +20,7 @@ angular.module('alurapic').controller('FotoController', function($scope, $http, 
           if (dados.inclusao) {
             $scope.foto = {};
           }
+          // $scope.focado = true;
         })
         .catch(function(dados) {
           $scope.mensagem = dados.mensagem;
