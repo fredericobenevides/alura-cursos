@@ -1,4 +1,5 @@
 var api = {};
+var CONTADOR = 2;
 
 var fotos = [
   {_id: 1, titulo: 'Leão', url:'http://www.fundosanimais.com/Minis/leoes.jpg' },
@@ -27,9 +28,24 @@ api.removePorId = function(req, res) {
 };
 
 api.adiciona = function(req, res) {
-  // fotos.push()
-  console.log(req.body);
+  var foto = req.body;
+  foto._id = ++CONTADOR;
+  fotos.push(foto);
 
+  res.json(foto);
 };
+
+api.atualiza = function(req, res) {
+  var foto = req.body;
+  var fotoId = req.params.id;
+
+  var indice = fotos.findIndex(function(foto) {
+    return foto._id == fotoId;
+  });
+
+  fotos[indice] = foto;
+
+  res.sendStatus(200);
+}
 
 module.exports = api;
