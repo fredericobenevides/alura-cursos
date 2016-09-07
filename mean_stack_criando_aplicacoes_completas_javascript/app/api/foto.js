@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 
 var api = {};
+
+var model = mongoose.model('Foto');
 // var CONTADOR = 2;
 
 // var fotos = [
@@ -9,7 +11,6 @@ var api = {};
 // ];
 
 api.lista = function(req, res) {
-  var model = mongoose.model('Foto');
   model
     .find({ })
     .then(function(fotos) {
@@ -31,6 +32,17 @@ api.lista = function(req, res) {
 };
 
 api.buscaPorId = function(req, res) {
+  model
+    .findById(req.params.id)
+    .then(function(foto) {
+      if (!foto) throw Error('Foto não encontrada');
+      res.json(foto);
+
+    }, function(error) {
+      console.log(error);
+      res.status(500).json(error);
+    });
+
   // var foto = fotos.find(function(foto) {
   //   return foto._id == req.params.id;
   // });
@@ -39,6 +51,16 @@ api.buscaPorId = function(req, res) {
 };
 
 api.removePorId = function(req, res) {
+  model
+    .remove({_id: req.params.id})
+    .then(function() {
+      res.sendStatus(204);
+
+    }, function(error) {
+      console.log(error);
+      res.status(500).json(error);
+    });
+
   // fotos.filter(function(foto) {
   //   return foto._id != req.params.id;
   // });
@@ -47,6 +69,18 @@ api.removePorId = function(req, res) {
 };
 
 api.adiciona = function(req, res) {
+  var foto = req.body;
+
+  model.create(foto)
+    .then(function(foto) {
+      res.json(foto);
+
+    }, function(error) {
+      console.log(error);
+      res.status(500).json(error);
+    });
+
+
   // var foto = req.body;
   // foto._id = ++CONTADOR;
   // fotos.push(foto);
@@ -55,6 +89,16 @@ api.adiciona = function(req, res) {
 };
 
 api.atualiza = function(req, res) {
+  model
+    .findByIdAndUpdate(req.params.id, req.body)
+    .then(function(foto) {
+      res.json(foto);
+
+    }, function(error) {
+      console.log(error);
+      res.status(500).json(error);
+    });
+
   // var foto = req.body;
   // var fotoId = req.params.id;
 
