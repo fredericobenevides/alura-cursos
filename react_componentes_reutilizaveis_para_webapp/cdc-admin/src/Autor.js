@@ -9,7 +9,7 @@ class FormularioAutor extends Component {
 
   constructor() {
     super();
-    this.state = {lista: []};
+    this.state = {nome: '', email: '', senha: ''};
     this.enviaForm = this.enviaForm.bind(this);
     this.setNome = this.setNome.bind(this);
     this.setEmail = this.setEmail.bind(this);
