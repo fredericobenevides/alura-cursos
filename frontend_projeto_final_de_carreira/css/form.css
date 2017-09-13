@@ -1,0 +1,44 @@
+.PanelForm {
+  margin-top: 32px;
+}
+
+.PanelForm-title {
+  font-size: 32px;
+  color: #EF7247;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.PanelFormField {
+  margin-bottom: 16px;
+}
+
+.PanelFormField-label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.PanelFormField-input {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #483a6;
+}
+
+.PanelFormPlace {
+  text-align: center;
+}
+
+.PanelFormPlace-button {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 25px 50px;
+  background-color: #48A2A6;
+  border-radius: 8px;
+}
